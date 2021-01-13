@@ -1,0 +1,20 @@
+#+title: stumpwm config
+
+* 编译安装
+
+依赖：
+
+#+begin_src lisp
+(ql:quickload "clx")
+(ql:quickload "cl-ppcre")
+(ql:quickload "alexandria")
+#+end_src
+
+编译安装：
+
+#+begin_src sh
+bash autogen.sh
+./configure --prefix=/home/[USER]/.config/stumpwm.d/INSTALL/
+make -j5
+make install
+#+end_src
