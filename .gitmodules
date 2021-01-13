@@ -1,0 +1,6 @@
+[submodule "stumpwm"]
+	path = stumpwm
+	url = git@github.com:stumpwm/stumpwm.git
+[submodule "stumpwm-contrib"]
+	path = stumpwm-contrib
+	url = git@github.com:stumpwm/stumpwm-contrib.git
