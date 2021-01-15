@@ -3,9 +3,13 @@
 (in-package :stumpwm)
 
 (defcommand run-emacs () ()
-  "Emacs"
+  "Run emacs"
   (run-or-raise "emacs" '(:class "Emacs")))
 
 (defcommand run-firefox () ()
-  "Firefox"
+  "Run firefox"
   (run-or-raise "firefox" '(:class "Firefox")))
+
+(defcommand slock () ()
+  "Lock session."
+  (run-shell-command "slock"))
