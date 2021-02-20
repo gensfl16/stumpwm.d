@@ -10,6 +10,8 @@
 
 ;; Program
 (define-key *root-map* (kbd "s-e") "run-emacsclient")
+(define-key *root-map* (kbd "s-t") "ec-term")
+(define-key *root-map* (kbd "s-T") "ec-telega")
 (define-key *root-map* (kbd "s-f") "run-firefox")
 (define-key *root-map* (kbd "s-r") "exec")
 
