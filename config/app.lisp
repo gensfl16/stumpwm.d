@@ -2,9 +2,9 @@
 
 (in-package :stumpwm)
 
-(defcommand run-emacs () ()
-  "Run emacs"
-  (run-or-raise "emacs" '(:class "Emacs")))
+(defcommand run-emacsclient () ()
+  "Run emacsclient."
+  (run-shell-command "emacsclient -a '' -c"))
 
 (defcommand run-firefox () ()
   "Run firefox"

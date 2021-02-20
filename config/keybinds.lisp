@@ -9,7 +9,7 @@
 (define-key *top-map* (kbd "s-R") "colon")
 
 ;; Program
-(define-key *root-map* (kbd "s-e") "run-emacs")
+(define-key *root-map* (kbd "s-e") "run-emacsclient")
 (define-key *root-map* (kbd "s-f") "run-firefox")
 (define-key *root-map* (kbd "s-r") "exec")
 
