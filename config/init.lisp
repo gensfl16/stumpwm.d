@@ -28,6 +28,7 @@
 
 (my/load-conf "clean")
 ;; (my/load-conf "defaults")
+(my/load-conf "ui")
 (my/load-conf "app")
 (my/load-conf "keybinds")
 ;; (my/load-conf "mode-line")
