@@ -9,9 +9,9 @@
 
 (in-package :stumpwm)
 
-(push #p"~/.config/emacs/site-lisp/sly/slynk/" asdf:*central-registry*)
-(asdf:load-system :slynk)
-(slynk:create-server :port 4008 :dont-close t)
+;; (push #p"~/.config/emacs/site-lisp/sly/slynk/" asdf:*central-registry*)
+;; (asdf:load-system :slynk)
+;; (slynk:create-server :port 4008 :dont-close t)
 
 (defvar my/config-path
   (directory-namestring
