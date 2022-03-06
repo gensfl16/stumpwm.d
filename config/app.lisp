@@ -19,8 +19,12 @@
                                                      (telega))'"))
 
 (defcommand run-firefox () ()
-  "Run firefox"
+  "Run firefox."
   (run-or-raise "firefox" '(:class "Firefox")))
+
+(defcommand run-mlterm () ()
+  "Run mlterm."
+  (run-shell-command "mlterm"))
 
 (defcommand slock () ()
   "Lock session."
