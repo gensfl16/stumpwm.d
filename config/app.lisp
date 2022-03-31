@@ -22,10 +22,30 @@
   "Run firefox."
   (run-or-raise "firefox" '(:class "Firefox")))
 
-(defcommand run-mlterm () ()
-  "Run mlterm."
-  (run-shell-command "mlterm"))
+(defcommand run-term () ()
+  "Run Term."
+  (run-shell-command "alacritty"))
 
 (defcommand slock () ()
   "Lock session."
   (run-shell-command "slock"))
+
+(defcommand run-xrandr-hdmi (&optional (initial "")) ()
+  "xrandr HDMI."
+  (let ((op (read-one-line (current-screen) "op: " :initial-input initial))
+	(cmd "xrandr") (pri-name *eDP-name*) (sec-name *HDMI-name*))
+    (cond ((string= op "l") (setq cmd (concatenate 'string cmd
+						" --output " sec-name
+						" --left-of " pri-name " --auto")))
+	  ((string= op "r") (setq cmd (concatenate 'string cmd
+					        " --output " sec-name
+						" --right-of " pri-name " --auto")))
+	  ((string= op "+") (setq cmd (concatenate 'string cmd
+					        " --output " sec-name
+						" --rotate right")))
+	  ((string= op "-") (setq cmd (concatenate 'string cmd
+						" --output " sec-name
+						" --rotate left")))
+	  (t (setq cmd (concatenate 'string cmd
+				    " --output " sec-name " --off"))))
+    (run-shell-command cmd)))
